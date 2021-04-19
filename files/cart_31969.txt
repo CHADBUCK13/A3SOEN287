@@ -1,0 +1,78 @@
+{
+
+    {
+
+        {
+
+            'Product Name' = Apple,
+
+            'Product ID' = 1,
+
+            'Price' = 0.50,
+
+            'Quantity' = 1,
+
+            'Subtotal' = 0.5,
+
+        }
+
+    },
+
+
+    {
+
+        {
+
+            'Product Name' = Eggs,
+
+            'Product ID' = 9687,
+
+            'Price' = 3.28,
+
+            'Quantity' = 1,
+
+            'Subtotal' = 3.28,
+
+        }
+
+    },
+
+
+    {
+
+        {
+
+            'Product Name' = Emos,
+
+            'Product ID' = 11,
+
+            'Price' = 7.99,
+
+            'Quantity' = 1,
+
+            'Subtotal' = 7.99,
+
+        }
+
+    },
+
+
+    {
+
+        {
+
+            'Product Name' = Frut Loops,
+
+            'Product ID' = 10,
+
+            'Price' = 10.99,
+
+            'Quantity' = 1,
+
+            'Subtotal' = 10.99,
+
+        }
+
+    },
+
+}

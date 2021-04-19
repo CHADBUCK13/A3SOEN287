@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang = "eng">
+    <head>
+        
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/js8.js"></script>
+
+<link rel = "stylesheet" href="css/site.css">
+
+    </head>
+
+<body>
+<!--Top header for logo and user tools-->
+<nav class="navbar navbar-inverse">
+    <!--Allow content to span entire page-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Hole Foods <span><img src="images/logo.png" alt="logo.png" style="height: 1.5em;"></span></a>
+
+            <!--Show user icon as button for dropdown when viewport drops below 775px width-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#commonHeader">
+                    <span class="glyphicon glyphicon-user" style="color:white;"></span>
+            </button>                
+        </div>
+
+                       
+    </div>        
+</nav>
+
+<!--Menu for page navigation-->
+<nav class="navbar navbar-default">
+    <!--Limit content to center of page-->
+    <div class="container">
+        <!--Show button with 3 bars for menu dropdown when viewport drops below 775px width-->
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        </div>
+
+        <!--when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <!--List of links to pages user can use-->
+            <ul class="nav navbar-nav">
+                <li><a href="Backstore(P7).html">Product List</a></li>
+                <li><a href="Backstore(P8).html">Add/Edit Products</a></li>                   
+                <li><a href="Backstore(P9).html">User List</a></li>
+                <li><a href="Backstore(P10).html">Add/Edit Users</a></li>
+                <li><a href="Backstore(P11).html">Order List</a></li>
+                <li><a href="Backstore(P12).html">Add/Edit Orders</a></li>
+            </ul>
+
+            <!--Show link to shopping cart floated on the right of the navbar-->
+           
+        </div>                   
+    </div>                                                              
+</nav>                                                                      
+<div class="page-container">
+    <main>
+<form>
+<h4>Edit/Add product page</h4>
+<h1 id = "sfh1">Edit/Add Product</h1>
+    <br/>
+    <br/>
+    <h5 id = "sfh5">Product Name:</h5>
+    <input  type = "text" id = "productname" name = "product name" placeholder="Product Name" class = "change-product-name">
+    <br/>
+    <span id="new-product-name" class="changing-span1">
+        
+    </span>
+    <br/>
+    <h5 id = "sfh5">Product ID:</h5>
+    <input  type = "text" id = "productID" name = "productID" placeholder="Product ID" class ="change-product-id">
+    <br/>
+    <span id="new-product-ID" class="changing-span2">
+        
+    </span>
+    <br/>
+    <h5 id = "sfh5">Inventory: </h5>
+    <h6 id = "shift"><i>Quantity</i></h6>
+    <input type = "text" id = "Inventoryoption" placeholder="Enter Quantity" class = "change-inventory-option">
+    <br/>
+    <span id="new-product-inventory" class="changing-span3">
+        
+    </span>
+    <br/>
+    <h5 id = "sfh5">Price:</h5>
+    <input type = "text" id = "price" placeholder="Enter a price" class = "change-price">
+    <br/>
+    <span id="new-product-price" class="changing-span4">
+        
+    </span>
+    <br/>
+    
+        <h5>Product description</h5> 
+        <textarea id = "textarea" class = "productdescription"></textarea>
+        <br/>
+        <span id="new-product-price" class="changing-span5">
+        
+        </span>
+        <br/>
+        <button type = "button" onclick = "makeChanges();">Save</button>
+    </form>
+    </main>
+    </div>
+</body>
+
+<footer class="bg-primary text-white text-lg-start">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4 customer-service">
+                <h5 class="text-uppercase">Customer Service</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#!" class="text-light">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Terms and conditions</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Find a store</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2021 Copyright:
+        <a class="text-light" href="../index.html">Hole Foods</a>
+    </div>
+
+</footer>
+</html>

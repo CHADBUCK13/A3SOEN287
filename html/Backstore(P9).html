@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+            <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js\remove.js"></script>
+    
+<link rel = "stylesheet" href="css/site.css">
+    </head>
+
+
+<body style="margin-top: -20px;">
+   <!--Top header for logo and user tools-->
+<nav class="navbar navbar-inverse">
+    <!--Allow content to span entire page-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Hole Foods <span><img src="images/logo.png" alt="logo.png" style="height: 1.5em;"></span></a>
+
+            <!--Show user icon as button for dropdown when viewport drops below 775px width-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#commonHeader">
+                    <span class="glyphicon glyphicon-user" style="color:white;"></span>
+            </button>                
+        </div>
+
+        <!--Show on right but when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="commonHeader">
+            <ul class="nav navbar-nav navbar-right">                
+                <li><a href='signup.html'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>
+                <li><a href='login.html'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>                       
+            </ul>
+        </div>                   
+    </div>        
+</nav>
+
+<!--Menu for page navigation-->
+<nav class="navbar navbar-default">
+    <!--Limit content to center of page-->
+    <div class="container">
+        <!--Show button with 3 bars for menu dropdown when viewport drops below 775px width-->
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        </div>
+
+        <!--when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <!--List of links to pages user can use-->
+            <ul class="nav navbar-nav">
+                <li><a href="Backstore(P7).html">Product List</a></li>
+                <li><a href="Backstore(P8).html">Add/Edit Products</a></li>                   
+                <li><a href="Backstore(P9).html">User List</a></li>
+                <li><a href="Backstore(P10).html">Add/Edit Users</a></li>
+                <li><a href="Backstore(P11).html">Order List</a></li>
+                <li><a href="Backstore(P12).html">Add/Edit Orders</a></li>
+            </ul>
+
+            <!--Show link to shopping cart floated on the right of the navbar-->
+           
+        </div>                   
+    </div>        
+</nav>
+
+<div id = "page-container">
+    <main>
+    <h1>List of Users</h1>
+    <input type = "text">
+    <button type = "button" >Search</button>
+    <button  type = "button" id = "add" class="addCheckedRows">Add</button> 
+    <button type = "button" id = "delete" class="mainDeleteButton">Delete selected</button>
+    
+  
+ <center> <table id="user-table">
+   
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" class="selectAll"> </td>
+        <td><h4><i>Name</i></h4></td>
+        <td><h4><i>User ID</i></h4></td>
+        <td><h4><i>Username</i></h4></td>
+        <td><h4><i>Country</i></h4></td>
+        <td><h4><i>City</i></h4></td>
+        <td><h4><i>Address</i></h4></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" value="1" class="removeBoxes"> </td>
+        <td class="user-name"><h5>Roronoa Zoro</h5></td>     
+        <td class="user-id"><h5>2093</h5></td>
+        <td class="user-email"><h5>Zorosan7711@gmail.com</h5></td>
+        <td class="user-country"><h5>Wano</h5></td>
+        <td class="user-city"><h5>Flower Capital</h5></td>
+        <td class="user-address"><h5>328 Samurai Av</h5></td>
+        <td id = "rightmargin"><form>
+            <a href="Backstore(P10).html">
+                <button  type = "button" id = "edit"> Edit</button>
+            </a>    
+            <button type = "button" id = "delete" class="btn-remove">
+                Delete
+            </button></form></td>
+    </tr>
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" value="2" class="removeBoxes"> </td>
+        <td class="user-name"><h5>Shayne Fleming</h5></td>     
+        <td class="user-id"><h5>2727</h5></td>
+        <td class="user-email"><h5>fleming667@gmail.com</h5></td>
+        <td class="user-country"><h5>Canada</h5></td>
+        <td class="user-city"><h5>Montreal</h5></td>
+        <td class="user-address"><h5>27 rue Roxboro </h5></td>
+        <td id = "rightmargin"><form> 
+            <a href="Backstore(P10).html">
+                <button  type = "button" id = "edit"> Edit</button>
+            </a>
+            <button type = "button" id = "delete" class="btn-remove">
+                Delete
+            </button></form></td>
+    </tr>
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" value="3" class="removeBoxes"> </td>
+        <td class="user-name"><h5>Alex Smith</h5></td>     
+        <td class="user-id"><h5>2981</h5></td>
+        <td class="user-email"><h5>smith11@gmail.com</h5></td>
+        <td class="user-country"><h5>USA</h5></td>
+        <td class="user-city"><h5>Texas</h5></td>
+        <td class="user-address"><h5>738 Horse</h5></td>
+        <td id = "rightmargin"><form>
+            <a href="Backstore(P10).html">
+                <button  type = "button" id = "edit"> Edit</button>
+            </a>    
+            <button type = "button" id = "delete" class="btn-remove">
+                Delete 
+            </button></form></td>
+    </tr>
+    
+</table></center>
+</div>
+</main>
+
+</body>
+
+    <!--Include common footer-->
+    <footer class="bg-primary text-white text-lg-start">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-4" id="customer-service">
+                    <h5 class="text-uppercase">Customer Service</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <div>
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+                                    Contact Us
+                                </button>
+                                <!-- modal for contact us form -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="myModalLabel" style="color: black; font-weight: bold;">Contact Us</h5>
+                                        </div>
+                                        <div class="modal-body" id="contactUsFormBody">
+                                            <form name="contactUs" id="contactUsForm">
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter email">
+                                                    <p id="emailMsg" style="color: red;"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="itemName">Item Name</label>
+                                                    <input type="text" class="form-control" name="itemName" id="itemName" placeholder="Item Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="orderNumber">Order Number</label>
+                                                    <input type="text" class="form-control" name="orderNumber" id="orderNumber" placeholder="Order Number">
+                                                    <p id="orderNumberMsg" style="color: red;"></p>
+                                                </div>
+                                                
+                                            </form>
+                                            <label for="questions">Questions</label></br>
+                                            <textarea name="questions" form="contactUsForm">(Optional)</textarea>
+    
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary" onclick="validateContactUsForm()">Submit</button>
+                                        </div>
+                                        <script type="text/javascript" src="js/Login.js"></script>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Terms and conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Find a store</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Copyright:
+            <a class="text-light" href="../index.html">Hole Foods</a>
+        </div>
+    
+    </footer>
+</html>

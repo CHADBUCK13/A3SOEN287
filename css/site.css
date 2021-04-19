@@ -1,0 +1,509 @@
+/*Chad Start*/
+
+
+
+/*Define size of each product when listed*/
+#productRow .col-md-3 {
+    width: 280px;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+
+/*Center and style centered text*/
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px black;
+}
+
+/*Show cart button on right*/
+#productRow button{
+    float:right;
+    margin-right: 0;
+}
+
+/*Style for product name price and weight */
+#productText  hr{
+    border-color:white;
+}
+#productRow .productName{
+    float: left;
+}
+#productRow .price{    
+    float: right;
+}
+#productRow p, #addToCart p{
+    color:red;
+}
+
+/*Relative spacing to lower content on details pages (more centered)*/
+.productDetails{
+    margin-top: 10%;
+}
+
+/*Define size of image for phone/tablet and desktop*/
+#productImage img {
+    width:240px;
+    height:160px;
+    object-fit: cover;
+}
+@media screen and (min-width: 1200px){
+    #productImage img {
+        width:480px;
+        height:320px;
+    }
+}
+
+#cartBtn{
+    margin-top: 2%;
+    background-color: lightblue;
+    padding: 10px 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+/*Position and size of quantity label*/
+#addToCart label, .productInCart label{
+    float: left;
+    font: bold 20px Helvetica, sans-serif;
+    padding: 0 10px 0 0;
+}
+
+/*Position and size of quantity input*/
+#addToCart [type=text], .productInCart [type=text] {
+    width: 40px;
+    font: 20px Helvetica, sans-serif;
+    padding: 3px 0 0 0;
+    text-align: center;
+    display: inline-block;
+}
+
+/*Relative spacing to lower content on details pages (more centered)*/
+#addToCart form{
+    margin-top: 13%;
+}
+
+/*Style for + and - buttons*/
+.value-button {
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 16px;
+    background-color: white;
+    vertical-align: middle;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: none;
+}
+.value-button:hover {
+  cursor: pointer;
+}
+
+#productInCart form{
+    display: inline-block;
+}
+#quantityLabel{
+    font-size: 20px;
+    display: inline-block;
+}
+.increment-button{
+    position: relative;
+    display: inline;
+    border-radius: 50%;
+    font-size: 16px;
+    background-color: white;
+    vertical-align: middle;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: none;
+}
+
+.increment-form{
+    display: inline-block;
+}
+/*Border around product description*/
+.panel-body {
+ border: 1px solid grey;
+}
+
+/*Style each product shown in cart*/
+.productInCart img{
+    float:left;
+    width:240px;
+    height:160px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+.productInCart {
+    margin-top: 50px;
+}
+.productInCart button {
+    font-size: 5px;
+}
+
+/*Clear float so that each item in cart summary appears below*/
+.cost{
+    clear:both
+}
+#checkOutBtns{
+    clear: both;
+}
+
+/*Style specific button*/
+#shoppingCart #cartBtn{
+    margin-top: 15px;
+    background-color: lightblue;
+    padding: 10px 50px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 510px){
+    #productRow .img-responsive{
+        width: 0;
+        height: 0;
+    }
+
+    #productRow .center{
+        font-size: 24px;
+    }
+
+    #productRow h2{
+        font-size: 24px;
+    }
+}
+
+#about h1{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#about p{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#about img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#subTotalDisplay{
+    color: black !important;
+    font-size: 20px;
+    display: inline;
+    float: right;
+}
+
+#specialsRow{
+    margin-top: 10px;
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color:green;
+}
+
+#specialsRow h2{
+    color: green;
+    text-align: center;
+}
+#sale{
+    color: green;
+}
+
+#salePrice{
+    text-decoration: line-through;
+}
+
+#saleItems{
+    padding: 0 0 5px 0;    
+}
+
+.popup{
+    display: inline-block;
+    position: relative;
+}
+
+.popup-text{
+    visibility: hidden;
+    background-color: rgb(8, 15, 15);
+    color: white;
+    text-align: center;
+    position: absolute;
+    width: 100px;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.popup .popup-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid rgb(8, 15, 15);
+  }
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  .cart-basket {
+    position: absolute;    
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    background-color: #337ab7;
+    border-radius: 50%;
+    bottom: 12px;
+    right: 50px
+  }
+
+  #shoppingText{    
+    position: absolute;
+    font-size: 12px;
+    left: 4px;
+    line-height: 1.4;
+    vertical-align: middle;
+  }
+/*Chad End*/
+
+/* Ryan Start */
+.navbar-inverse{    
+    border-radius: 0;
+    margin: 0px;
+    padding: 0px;
+}
+/* keeps it sticky when you scroll down */
+.navbar-default{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.text-light{
+    color: #FFF;
+}
+.login{
+    width:50%;
+    margin: auto;
+    border: grey 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+.signup{
+    width:75%;
+    max-width: 800px;
+    margin: 5rem auto;
+    padding: 3%;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+.jumbotron{
+    background-image: url("../images/holes-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    max-width: 4418px;
+    max-height: 3051px;
+}
+.inside-jumbotron{
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.37);
+    padding: 15px;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+}
+.inside-jumbotron h1{
+    padding: 0;
+}
+
+.thumbnail img{
+    height: 242px;
+    object-fit: scale-down;
+}
+main{
+    padding-bottom: 19rem;
+}
+#page-container{
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
+    align-self: center;
+}
+
+/*Used with footer to make sticky*/
+html{
+    position: relative;
+    min-height: 100%;    
+}
+
+/*Used with footer to make sticky*/
+body{   
+    padding: 0;
+    margin: 0;
+    margin-top: -20px;
+}
+/*Make sticky footer*/
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#customer-service h5{
+    padding: 0;
+}
+#contactUsFormBody{
+    color: black;
+}
+
+/* Ryan End */
+
+/*Shayne/Dom start */
+tr {
+background-color: rgb(255, 255, 255);
+border: 2px solid rgb(0, 0, 0);
+width:10%;
+}
+
+table {
+    width: 94%;
+    padding: 1rem;
+}
+#Zoro{
+    column-width: 5px;
+    padding: 2rem;
+}
+#tableSelect{
+    padding: 2rem;
+}
+#productname{
+    width: 30%;
+    margin-left: 2rem;
+    height: 3rem;
+}
+#productID{
+    width: 30%;
+    margin-left: 2rem;
+    height: 3rem;
+}
+#Inventoryoption{
+    margin-left: 2rem;
+}
+#productpic{
+    width: 100px;
+    height: 100px;
+}
+td{
+    column-width: 200px;
+
+}
+
+#shift{
+    margin-left: 2rem;
+}
+#price{
+    width: 20%;
+    margin-left:2rem;
+    margin-left: 0;
+}
+#textarea{
+    margin-left: 2rem;
+    width: 350px;
+    height: 200px;
+
+}
+#edit{
+    background-color: rgb(116, 179, 238);
+    color:  white;
+    border-radius: 4px;
+    border-color:  rgb(116, 179, 238);
+    
+    
+}
+#edit:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#add{
+    background-color: rgb(56, 163, 56);
+    color: white;
+    border-radius: 4px;
+    border-color: rgb(56, 163,56)
+    
+  
+}
+#add:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#delete{
+    background-color: rgb(233, 67, 67);
+    color:White;
+    border-radius: 4px;
+    border-color: rgb(233, 67, 67);
+}
+#delete:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#rightmargin{
+    margin-right: 0px;
+}
+
+#outofstock{
+    color:red;
+}
+
+#editCart [type=text] {
+    width: 40px;
+    font: 16px Helvetica, sans-serif;
+    padding: 3px 0 0 0;
+    text-align: center;
+}
+
+.changing-span {
+    font: 25px Helvetica, sans-serif;
+    width: 40px;
+    text-align: center;
+    font-weight: 750;
+}
+/*Shayne/Dom End*/
+
+.userRow {
+    align-content: stretch;
+}
+
+.addaddCheckedRows {
+    align-self: center;
+    left: 5%;
+    text-indent: 500px;
+}

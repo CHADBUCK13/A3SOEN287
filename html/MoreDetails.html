@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Details</title>
+
+    <!--Bootstrap stuff-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/site.css" />
+
+    
+</head>
+<body>
+
+    <div class="productDetails">
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-6' id='productImage'>
+                    <img src='images/$productImage' alt='$productName'>
+                </div>
+    
+                <div class='col-md-6' id='addToCart'>
+                    <h1>$productName</h1>
+                    <h1 style='color:Green; margin-top:7%;'>$price$</h1>
+                    <form action='php/AddToCart.php' method='post'>
+                        <script src='js/Increment.js'></script>
+    
+                        <div id='chooseQnt'>
+                            <label for:'name'>Quantity: </label>
+                            <div class='value-button' id='decrease' onclick=decreaseValue('$productID') value='Decrease Value'>
+                                <span class='glyphicon glyphicon-minus'></span>
+                            </div>
+                            <input type='text' name='quantity' id='$productID' value='1'>
+                            <div class='value-button' id='increase' onclick=increaseValue('$productID') value='Increase Value'>
+                                <span class='glyphicon glyphicon-plus'></span>
+                            </div> 
+                        </div>
+                        
+                        <button type='submit' id='cartBtn' name='productID' value='$productID'>
+                            <span class='glyphicon glyphicon-shopping-cart'></span>
+                        </button>       
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class='container'>
+            <div class='col-md-12' style='margin-top:20px'>
+                <p>
+                    <button class='btn' type='button' data-toggle='collapse' data-target='#collapseInfo'>More Info <span class='glyphicon glyphicon-chevron-down'></span></button>
+                </p>
+    
+                <div id='collapseInfo' class='collapse'>
+                    <div class='panel panel-body'>
+                        $productDetails
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+
+</body>
+</html>

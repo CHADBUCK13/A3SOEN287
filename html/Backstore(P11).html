@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src = "js/OrderList.js"></script>
+    <title>Order List</title>
+    
+<link rel = "stylesheet" href="css/site.css">
+
+    </head>
+<!--Top header for logo and user tools-->
+<nav class="navbar navbar-inverse">
+    <!--Allow content to span entire page-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Hole Foods <span><img src="images/logo.png" alt="logo.png" style="height: 1.5em;"></span></a>
+
+            <!--Show user icon as button for dropdown when viewport drops below 775px width-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#commonHeader">
+                    <span class="glyphicon glyphicon-user" style="color:white;"></span>
+            </button>                
+        </div>
+
+                       
+    </div>        
+</nav>
+
+<!--Menu for page navigation-->
+<nav class="navbar navbar-default">
+    <!--Limit content to center of page-->
+    <div class="container">
+        <!--Show button with 3 bars for menu dropdown when viewport drops below 775px width-->
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        </div>
+
+        <!--when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <!--List of links to pages user can use-->
+            <ul class="nav navbar-nav">
+                <li><a href="Backstore(P7).html">Product List</a></li>
+                <li><a href="Backstore(P8).html">Add/Edit Products</a></li>                   
+                <li><a href="Backstore(P9).html">User List</a></li>
+                <li><a href="Backstore(P10).html">Add/Edit Users</a></li>
+                <li><a href="Backstore(P11).html">Order List</a></li>
+                <li><a href="Backstore(P12).html">Add/Edit Orders</a></li>
+            </ul>
+
+            <!--Show link to shopping cart floated on the right of the navbar-->
+           
+        </div>                   
+    </div>        
+</nav>
+
+    <div class = "table-responsive" id = "list">
+        <h1>Edit Order List</h1>
+    <br/>
+    
+    <div id="menu">
+        <label>Select Order: </label>
+        <select name = "Order">
+            <option value = "Dominic">Dominic's Order</option>
+            <option value = "Shayne">Shayne's Order</option>
+            <option value = "John">John's Order</option>
+        </select>
+        <a href = "Backstore(P12).html">
+            <input type = "button" value = "Edit" id = "edit">
+        </a>
+        <button onclick="removeCart()" id="delete">Remove Cart</button>
+    </div>
+    
+    <br/>
+    <br/>
+        <div class = "table-responsive" id = "cart1">
+            <center><table>
+                <label>
+                   <h3><u>Cart #0000001: Dominic Llamas (UserID: 40175849)</u></h3>
+                </label>
+    
+                <tr>
+                    <td id = "tableSelect"><i><h4><input type = "checkbox" value="box1" id="box1"> Select Cart</h4></i></td>
+                    <td><i><h4>Product</h4></i></td>
+                    <td><i><h4>Quantity</h4></i></td>
+                    <td><i><h4>Price</h4></i></td>
+                    <td></td>
+                </tr>
+    
+    
+                <tr>
+                    <td><center><img src = "images/Orange.jpg"
+                        alt = "Orange" width = "100" height = "100" style="object-fit: contain;"></center></td>
+                    <td><h5>Orange</h5></td>
+                    <td>
+                        <form name = "calculate1">
+                        <input type = "text" size = "5" value = "3" name = "amount1">
+                        </form>
+                    </td>
+                    <td><h5>$0.99</h5></td>
+                    <td> 
+                        <input type = "button" onclick = "addItem1()" value = "Add" id = "add">
+                        <input type = "button" onclick = "reduceItem1()" value = "Delete" id = "delete" >
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td><center><img src = "images/Kiwis.jpg"
+                        alt = "Kiwi" width = "100" height = "100" style="object-fit: contain;"></center></td>
+                    <td><h5>Kiwi</h5></td>
+                    <td>
+                        <form name = "calculate2">
+                            <input type = "text" size = "5" value = "5" name = "amount2">
+                        </form>
+                    </td>
+                    <td><h5>$0.99</h5></td>
+                    <td>
+                        <input type = "button" onclick = "addItem2()" value = "Add" id = "add">
+                        <input type = "button" onclick = "reduceItem2()" value = "Delete" id = "delete" >
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td><center><img src = "images/apple.jpg"
+                        alt = "Apple" width = "100" height = "100" style="object-fit: contain;"></center></td>
+                    <td><h5>Apple</h5></td>
+                    <td>
+                        <form name = "calculate3">
+                            <input type = "text" size = "5" value = "2" name = "amount3">
+                        </form>
+                    </td>
+                    <td><h5>$1.00</h5></td>
+                    <td>
+                        <input type = "button" onclick = "addItem3()" value = "Add" id = "add">
+                        <input type = "button" onclick = "reduceItem3()" value = "Delete" id = "delete" >
+                    </td>
+                </tr>
+            </table></center>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    
+        <div class = "table-responsive" id = "cart2">
+            <center><table>
+                <label>
+                    <h3><u>Cart #0000002: Shayne Luffy (UserID: 40175884)</u></h3>
+                 </label>
+    
+                 <tr>
+                    <td id = "tableSelect"><i><h4><input type = "checkbox" value="box2" id="box2"> Select Cart</h4></i></td>
+                    <td><i><h4>Product</h4></i></td>
+                    <td><i><h4>Quantity</h4></i></td>
+                    <td><i><h4>Price</h4></i></td>
+                    <td></td>
+                </tr>
+    
+    
+    
+                <tr>
+                    <td><center><img src = "images/Orange.jpg"
+                        alt = "Orange" width = "100" height = "100" style="object-fit: contain;"></center></td>
+                    <td><h5>Orange</h5></td>
+                    <td>
+                        <form name = "calculate4">
+                            <input type = "text" size = "5" value = "3" name = "amount4">
+                        </form>
+                    </td>
+                    <td><h5>$0.99</h5></td>
+                    <td>                        
+                        <input type = "button" onclick = "addItem4()" value = "Add" id = "add">
+                        <input type = "button" onclick = "reduceItem4()" value = "Delete" id = "delete" >
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td><center><img src = "images/Banana.jpg"
+                        alt = "Banana" width = "100" height = "100" style="object-fit: contain;"></center></td>
+                    <td><h5>Banana</h5></td>
+                    <td>
+                        <form name = "calculate5">
+                            <input type = "text" size = "5" value = "6" name = "amount5">
+                        </form>
+                    </td>
+                    <td><h5>$0.33</h5></td>
+                    <td>                        
+                        <input type = "button" onclick = "addItem5()" value = "Add" id = "add">
+                        <input type = "button" onclick = "reduceItem5()" value = "Delete" id = "delete" >
+                    </td>
+                </tr>
+            </table></center>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    
+        <div class = "table-responsive" id = "cart3">
+            <center><table>
+                <label>
+                    <h3><u>Cart #0000003: John Doe (UserID: 40176969)</u></h3>
+                 </label>
+    
+                 <tr>
+                    <td id = "tableSelect"><i><h4><input type = "checkbox" value="box3" id="box3"> Select Cart</h4></i></td>
+                    <td><i><h4>Product</h4></i></td>
+                    <td><i><h4>Quantity</h4></i></td>
+                    <td><i><h4>Price</h4></i></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><center><img src = "images/Ham.jpg"
+                        alt = "Ham" width = "100" height = "100" style="object-fit: contain;"></center></td>
+                    <td><h5>Ham</h5></td>
+                    <td>
+                        <form name = "calculate6">
+                            <input type = "text" size = "5" value = "4" name = "amount6">
+                        </form>
+                    </td>
+                    <td><h5>$7.00</h5></td>
+                    <td>                        
+                        <input type = "button" onclick = "addItem6()" value = "Add" id = "add">
+                        <input type = "button" onclick = "reduceItem6()" value = "Delete" id = "delete" >
+                    </td>
+                </tr>
+            </table></center>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+</body>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<footer class="bg-primary text-white text-lg-start">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4 customer-service">
+                <h5 class="text-uppercase">Customer Service</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#!" class="text-light">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Terms and conditions</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Find a store</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2021 Copyright:
+        <a class="text-light" href="../index.html">Hole Foods</a>
+    </div>
+
+</footer>
+</html>
+

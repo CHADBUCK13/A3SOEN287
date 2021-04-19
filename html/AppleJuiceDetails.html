@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Details</title>
+
+    <!--Bootstrap CDN and scripts-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--Website wide css file-->
+    <link rel="stylesheet" href="css/site.css" />
+
+    <script src="js/Increment.js"></script>
+    
+</head>
+<body>
+    <!--Top header for logo and user tools-->
+<nav class="navbar navbar-inverse">
+    <!--Allow content to span entire page-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Hole Foods <span><img src="images/logo.png" alt="logo.png" style="height: 1.5em;"></span></a>
+
+            <!--Show user icon as button for dropdown when viewport drops below 775px width-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#commonHeader">
+                    <span class="glyphicon glyphicon-user" style="color:white;"></span>
+            </button>                
+        </div>
+
+        <!--Show on right but when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="commonHeader">
+            <ul class="nav navbar-nav navbar-right">                
+                <li><a href='signup.html'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>
+                <li><a href='login.html'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>                       
+            </ul>
+        </div>                   
+    </div>        
+</nav>
+
+<!--Menu for page navigation-->
+<nav class="navbar navbar-default">
+    <!--Limit content to center of page-->
+    <div class="container">
+        <!--Show button with 3 bars for menu dropdown when viewport drops below 775px width-->
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        </div>
+
+        <!--when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <!--List of links to pages user can use-->
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AllProducts.html">All Products</a></li>
+                <!--Dropdown list of links for aisles that go to separate pages for each aisle-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Aisles <span class="caret"></span> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Beverages.html">Beverages</a></li>
+                            <li><a href="CleaningSupplies.html">Cleaning Supplies</a></li>                            
+                            <li><a href="Dairy.html">Dairy</a></li>
+                            <li><a href="Deli.html">Deli</a></li>
+                            <li><a href="Fruit.html">Fruits</a></li>
+                            <li><a href="Pantry.html">Pantry</a></li>                            
+                        </ul>
+                </li>                    
+                <li><a href="About.html">About</a></li>
+                
+            </ul>
+
+            <!--Show link to shopping cart floated on the right of the navbar-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="ShoppingCart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                
+            </ul>
+        </div>                   
+    </div>        
+</nav>
+  
+    
+    <main>
+    <!--Specify div type for css styling-->
+    <div class="productDetails">
+        <!--Center and limit webpage content with container-->
+        <div class='container'>
+            <!--Display each below div in row until col divs overflow, then go to next row-->
+            <div class='row'>
+                <!--Use half of page for photo of product-->
+                <div class='col-md-6' id='productImage'>
+                    <img src='images/AppleJuice.jpg' alt='AppleJuice'>
+                </div>
+                
+                 <!--Use other of half page for product specifications-->
+                <div class='col-md-6' id='addToCart'>
+                    <h1>Apple Juice</h1>
+                    <h1 style='color:Green; margin-top:3%;' id="price20">2.25$</h1>
+                    <h3 id="salePrice">3.99$</h3>
+                    <p>2L</p>
+                    <form action='' method=''>
+                        
+                        <!--Buttons to use with js later for incrementing and decrementing quanitiy-->
+                        <div id='chooseQnt'>
+                            <label for='quantity'>Quantity: </label>
+                            <div class='value-button' id='decrease' onclick="decreaseValue(2, 'price20', 'subTotal20')" value='Decrease Value'>
+                                <span class='glyphicon glyphicon-minus'></span>
+                            </div>
+                            <input type='text' name='quantity' id='2' value='1'>
+                            <div class='value-button' id='increase' onclick="increaseValue(2, 'price20', 'subTotal20')" value='Increase Value'>
+                                <span class='glyphicon glyphicon-plus'></span>
+                            </div> 
+                            <p id='subTotalDisplay'><span id='subTotal20'>2.25</span>$</p>
+                        </div>
+                        
+                        <button type='submit' id='cartBtn' name='productID' value=''>
+                            <span class='glyphicon glyphicon-shopping-cart'></span>
+                        </button>       
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!--Center and limit webpage content with container and separate from above container-->
+        <div class='container'>
+            <div class='col-md-12' style='margin-top:20px'>
+                <p>
+                    <button class='btn' type='button' data-toggle='collapse' data-target='#collapseInfo'>More Info <span class='glyphicon glyphicon-chevron-down'></span></button>
+                </p>
+
+                <!--Collapsable product info-->
+                <div id='collapseInfo' class='collapse'>
+                    <div class='panel panel-body'>
+                        Apple juice a day keeps the doctor away
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+    </main>
+
+    <!--Include common footer-->
+<footer class="bg-primary text-white text-lg-start">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4" id="customer-service">
+                <h5 class="text-uppercase">Customer Service</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <div>
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+                                Contact Us
+                            </button>
+                            <!-- modal for contact us form -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h5 class="modal-title" id="myModalLabel" style="color: black; font-weight: bold;">Contact Us</h5>
+                                    </div>
+                                    <div class="modal-body" id="contactUsFormBody">
+                                        <form name="contactUs" id="contactUsForm">
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="text" class="form-control" name="email" id="email" placeholder="Enter email">
+                                                <p id="emailMsg" style="color: red;"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="itemName">Item Name</label>
+                                                <input type="text" class="form-control" name="itemName" id="itemName" placeholder="Item Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="orderNumber">Order Number</label>
+                                                <input type="text" class="form-control" name="orderNumber" id="orderNumber" placeholder="Order Number">
+                                                <p id="orderNumberMsg" style="color: red;"></p>
+                                            </div>
+                                            
+                                        </form>
+                                        <label for="questions">Questions</label></br>
+                                        <textarea name="questions" form="contactUsForm">(Optional)</textarea>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary" onclick="validateContactUsForm()">Submit</button>
+                                    </div>
+                                    <script type="text/javascript" src="js/Login.js"></script>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Terms and conditions</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Find a store</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2021 Copyright:
+        <a class="text-light" href="../index.html">Hole Foods</a>
+    </div>
+
+</footer>
+
+</body>
+</html>

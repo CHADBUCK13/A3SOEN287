@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang = "eng">
+    <head>
+            <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/js7.js"></script>
+
+<link rel = "stylesheet" href="css/site.css">
+
+    </head>
+
+
+    <body>
+<!--Top header for logo and user tools-->
+<nav class="navbar navbar-inverse">
+    <!--Allow content to span entire page-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Hole Foods <span><img src="images/logo.png" alt="logo.png" style="height: 1.5em;"></span></a>
+
+            <!--Show user icon as button for dropdown when viewport drops below 775px width-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#commonHeader">
+                    <span class="glyphicon glyphicon-user" style="color:white;"></span>
+            </button>                
+        </div>
+
+                       
+    </div>        
+</nav>
+
+<!--Menu for page navigation-->
+<nav class="navbar navbar-default">
+    <!--Limit content to center of page-->
+    <div class="container">
+        <!--Show button with 3 bars for menu dropdown when viewport drops below 775px width-->
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        </div>
+
+        <!--when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <!--List of links to pages user can use-->
+            <ul class="nav navbar-nav">
+                <li><a href="Backstore(P7).html">Product List</a></li>
+                <li><a href="Backstore(P8).html">Add/Edit Products</a></li>                   
+                <li><a href="Backstore(P9).html">User List</a></li>
+                <li><a href="Backstore(P10).html">Add/Edit Users</a></li>
+                <li><a href="Backstore(P11).html">Order List</a></li>
+                <li><a href="Backstore(P12).html">Add/Edit Orders</a></li>
+            </ul>
+
+            <!--Show link to shopping cart floated on the right of the navbar-->
+           
+        </div>                   
+    </div>        
+</nav>
+    <div id = "page-container">
+        <main>
+    <h1 id = "sfh1">Products</h1>
+    <input type = "text">
+    <button type = "button">Search</button>
+    <button  type = "button" id = "add" class="addCheckedRows">Add</button>
+     <button type = "button" id = "delete" class = "mainDeleteButton">Delete selected</button>
+  
+   
+    <center>
+      <table id = "user-table">
+   
+        <tr>
+<td id = "Zoro"><input type = "checkbox" class = "selectAll" > </td>
+<td> </td>
+<td><h4><i>Product Name</i></h4></td>
+<td><h4><i>Product ID</i></h4></td>
+<td><h4><i>Quantity</i></h4></td>
+<td><h4><i>Price</i></h4></td>
+<td></td>
+        </table>
+        <table id = "user-table">
+    </tr>
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" value="1" class = "removeBoxes"> </td>
+        <td class = "productpic"><img src = "https://sites.psu.edu/lifeitmoveson/files/2017/10/orange-1hoca2l.jpg" id = "centerimage"
+             alt = "Orange" width = "100" height = "100">
+        </td>     
+        <td class = "productname"><h5 id  = "sfh5">Orange</h5></td>
+        <td class = "productID"><h5 id = "sfh5">0012</h5></td>
+        <td class = "productquantity"><h5 id = "sfh5">61</h5></td>
+        <td class = "productprice"><h5 id = "sfh5">$0.99</h5></td>
+        <td id = "rightmargin"><form><a href = "Backstore(p2).html"><button  type = "button" id = "edit" >Edit</button></a>
+            <button type = "button" id = "delete" class = "btn-remove">Delete</button></form></td>
+       
+    </tr>
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" value="2" class = "removeBoxes"> </td>
+        <td class = "productpic"><img src = "https://images.immediate.co.uk/production/volatile/sites/30/2020/02/Kiwi-fruits-582a07b.jpg?quality=90&resize=960,872"
+             alt = "Kiwi" width = "100" height = "100">
+        </td>     
+        <td class="productname"><h5 id = "sfh5">Kiwi</h5></td>
+        <td class= "productID"><h5 id = "sfh5">0121</h5></td>
+        <td class = "productquantity"><h5 id = "outofstock"><i>Out of stock</i></h5></td>
+        <td class = "productprice"><h5 id = "sfh5">$0.99</h5></td>
+        <td id = "rightmargin"><form><a href = "Backstore(p2).html"><button  type = "button" id = "edit" >Edit</button></a>
+            <button type = "button" id = "delete" class = "btn-remove">Delete</button></form></td>
+       
+    </tr>
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" value="3" class = "removeBoxes"> </td>
+        <td class = "productpic"><img src = "https://cdn.mos.cms.futurecdn.net/42E9as7NaTaAi4A6JcuFwG-1200-80.jpg"
+             alt = "Banana" width = "100" height = "100">
+        </td>     
+        <td class = "productname"><h5 id = "sfh5">Banana</h5></td>
+        <td class = "productID"><h5 id = "sfh5">7129</h5></td>
+        <td class = "productquantity"><h5 id = "outofstock"><i>Out of stock</i></h5></td>
+        <td class = "productprice"><h5 id = "sfh5">$0.33</h5></td>
+        <td id = "rightmargin"><form><a href = "Backstore(p2).html"><button  type = "button" id = "edit" >Edit</button></a>
+            <button type = "button" id = "delete" class = "btn-remove">Delete</button></form></td>
+       
+    </tr>
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" value="4" class = "removeBoxes"> </td>
+        <td class = "productpic"><img src = "https://www.dabur.com/realfruitpower/contentimage/ContentImage7-8-2014873623971.png"
+             alt = "Apple" width = "100" height = "100">
+        </td>     
+        <td class= "productname"><h5 id = "sfh5">Apple</h5></td>
+        <td class = "productID"><h5 id = "sfh5">2109</h5></td>
+        <td class= "productquantity"><h5 id = "sfh5">77</h5></td>
+        <td class= "productprice"><h5 id = "sfh5">$1.00</h5></td>
+        <td id = "rightmargin"><form><a href = "Backstore(p2).html"><button  type = "button" id = "edit" >Edit</button></a>
+            <button type = "button" id = "delete" class = "btn-remove">Delete</button></form></td>
+       
+    </tr>
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" value="5" class = "removeBoxes"> </td>
+        <td class = "productpic"><img src = "https://www.theseasonedmom.com/wp-content/uploads/2019/02/5-Ingredient-Baked-Ham-with-Apricot-Glaze-12.jpg"
+             alt = "Ham" width = "100" height = "100">
+        </td>     
+        <td class= "productname"><h5 id = "sfh5">Ham</h5></td>
+        <td class = "productID"><h5 id = "sfh5">1290</h5></td>
+        <td class = "productquantity"><h5 id = "outofstock"><i>Out of stock</i></h5></td>
+        <td class = "productprice"><h5 id = "sfh5">$7.00</h5></td>
+        <td id = "rightmargin"><form><a href = "Backstore(p2).html"><button  type = "button" id = "edit" >Edit</button></a>
+            <button type = "button" id = "delete" class = "btn-remove">Delete</button></form></td>
+       
+    </tr>
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" value="6" class = "removeBoxes"> </td>
+        <td class = "productpic"><img src = "https://www.theblackpeppercorn.com/wp-content/uploads/2017/08/How-to-make-sausage-2.jpg"
+             alt = "Sausage" width = "100" height = "100">
+        </td>     
+        <td class= "productname"><h5 id = "sfh5">Sausage</h5></td>
+        <td class = "productID"><h5 id = "sfh5">2109</h5></td>
+        <td class = "productquantity"><h5 id = "outofstock"><i>Out of stock</i></h5></td>
+        <td class = "productprice"><h5 id = "sfh5">$2.00</h5></td>
+        <td id = "rightmargin"><form><a href = "Backstore(p2).html"><button  type = "button" id = "edit" >Edit</button></a>
+            <button type = "button" id = "delete" class = "btn-remove">Delete</button></form></td>
+       
+    </tr>
+    <tr>
+        <td id = "Zoro"><input type = "checkbox" value="7" class = "removeBoxes"> </td>
+        <td class = "productpic"><img src = "https://www.gannett-cdn.com/-mm-/4e57f417ab56d8147a59ed2deb8f3a4b0b446da3/c=0-108-2120-1306/local/-/media/2017/02/28/USATODAY/USATODAY/636238697589955973-GettyImages-479352566.jpg"
+             alt = "Milk" width = "100" height = "100">
+        </td>     
+        <td class= "productname"><h5 id = "sfh5">Milk</h5></td>
+        <td class = "productID"><h5 id = "sfh5">3290</h5></td>
+        <td class = "productquantity"><h5 id = "outofstock"><i>Out of stock</i></h5></td>
+        <td class = "productprice"><h5 id = "sfh5">$6.76</h5></td>
+        <td id = "rightmargin"><form><a href = "Backstore(p2).html"><button  type = "button" id = "edit" >Edit</button></a>
+            <button type = "button" id = "delete" class = "btn-remove">Delete</button></form></td>
+       
+    </tr>
+</table>
+</center>
+</div>
+</main>
+<footer class="bg-primary text-white text-lg-start">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4 customer-service">
+                <h5 class="text-uppercase">Customer Service</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#!" class="text-light">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Terms and conditions</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Find a store</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2021 Copyright:
+        <a class="text-light" href="../index.html">Hole Foods</a>
+    </div>
+
+</footer>
+
+</body>
+</html>
+
+     
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

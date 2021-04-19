@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <!--Bootstrap CDN and scripts-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--Website wide css file-->
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <!--Top header for logo and user tools-->
+    <nav class="navbar navbar-inverse">
+        <!--Allow content to span entire page-->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Hole Foods <span><img src="images/logo.png" alt="logo.png" style="height: 1.5em;"></span></a>
+
+                <!--Show user icon as button for dropdown when viewport drops below 775px width-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#commonHeader">
+                        <span class="glyphicon glyphicon-user" style="color:white;"></span>
+                </button>                
+            </div>
+
+            <!--Show on right but when viewport drops below 775px width collapse-->
+            <div class="collapse navbar-collapse" id="commonHeader">
+                <ul class="nav navbar-nav navbar-right">                
+                    <li><a href='signup.html'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>
+                    <li><a href='login.html'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>                       
+                </ul>
+            </div>                   
+        </div>        
+    </nav>
+    <!--Menu for page navigation-->
+    <nav class="navbar navbar-default">
+        <!--Limit content to center of page-->
+        <div class="container">
+            <!--Show button with 3 bars for menu dropdown when viewport drops below 775px width-->
+            <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+            </div>
+
+            <!--when viewport drops below 775px width collapse-->
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <!--List of links to pages user can use-->
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AllProducts.html">All Products</a></li>
+                    <!--Dropdown list of links for aisles that go to separate pages for each aisle-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Aisles <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Fruit.html">Fruits</a></li>
+                                <li><a href="Dairy.html">Dairy</a></li>
+                                <li><a href="Deli.html">Deli</a></li>
+                                <li><a href="CleaningSupplies.html">Cleaning Supplies</a></li>
+                            </ul>
+                    </li>                    
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+
+                <!--Show link to shopping cart floated on the right of the navbar-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="ShoppingCart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    
+                </ul>
+            </div>                   
+        </div>        
+    </nav>
+
+    <main>
+        
+    </main>
+
+    <footer class="bg-primary text-white text-lg-start">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-4 customer-service">
+                    <h5 class="text-uppercase">Customer Service</h5>
+    
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-light">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Terms and conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Find a store</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Copyright:
+            <a class="text-light" href="../index.html">Hole Foods</a>
+        </div>
+    
+    </footer>
+    
+</body>
+</html>

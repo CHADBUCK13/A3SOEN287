@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--Bootstrap CDN and scripts-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--Website wide css file-->
+    <link rel="stylesheet" href="css/site.css" />
+    
+</head>
+<body>
+    <!--Top header for logo and user tools-->
+    <nav class="navbar navbar-inverse">
+        <!--Allow content to span entire page-->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Hole Foods <span><img src="images/logo.png" alt="logo.png" style="height: 1.5em;"></span></a>
+
+                <!--Show user icon as button for dropdown when viewport drops below 775px width-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#commonHeader">
+                        <span class="glyphicon glyphicon-user" style="color:white;"></span>
+                </button>                
+            </div>
+
+            <!--Show on right but when viewport drops below 775px width collapse-->
+            <div class="collapse navbar-collapse" id="commonHeader">
+                <ul class="nav navbar-nav navbar-right">                
+                    <li><a href='signup.html'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>
+                    <li><a href='login.html'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>                       
+                </ul>
+            </div>                   
+        </div>        
+    </nav>
+
+    <!--Menu for page navigation-->
+    <nav class="navbar navbar-default">
+        <!--Limit content to center of page-->
+        <div class="container">
+            <!--Show button with 3 bars for menu dropdown when viewport drops below 775px width-->
+            <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+            </div>
+
+            <!--when viewport drops below 775px width collapse-->
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <!--List of links to pages user can use-->
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AllProducts.html">All Products</a></li>
+                    <!--Dropdown list of links for aisles that go to separate pages for each aisle-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Aisles <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Beverages.html">Beverages</a></li>
+                                <li><a href="CleaningSupplies.html">Cleaning Supplies</a></li>                            
+                                <li><a href="Dairy.html">Dairy</a></li>
+                                <li><a href="Deli.html">Deli</a></li>
+                                <li><a href="Fruit.html">Fruits</a></li>
+                                <li><a href="Pantry.html">Pantry</a></li>                            
+                            </ul>
+                    </li>                    
+                    <li><a href="About.html">About</a></li>
+                    
+                </ul>
+
+                <!--Show link to shopping cart floated on the right of the navbar-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="ShoppingCart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    
+                </ul>
+            </div>                   
+        </div>        
+    </nav>
+    
+    <main>
+        <!-- jumbotron -->
+        <div class="container" style="height: 80%; width: 80%;">
+            <div class="jumbotron">
+                <div class="inside-jumbotron">
+                    <h1>Welcome! Check out the Deal of the Day!</h1>
+                    <p>Ah ah, we have bare deals famski</p>
+                    <p>Stop being a waste and bless up the mandem with your business</p>
+                    <p><a class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-tag"></span> Deal of the Day</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-bottom: 20px; border-radius: 15px;">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/market.jpg" alt="market.jpg">
+                    </div>
+                
+                    <div class="item">
+                        <img src="images/bagels-slide.jpg" alt="holes-bg.jpg">
+                        <div class="carousel-caption">
+                            <h2>Fresh bagels!</h2>
+                        </div>
+                    </div>
+                
+                    <div class="item">
+                        <img src="images/donut-rack.jpg" alt="donut-rack.jpg">
+                        <div class="carousel-caption">
+                            <h2>Come check out our homemade donuts!</h2>
+                        </div>    
+                    </div>
+                </div>
+            
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <!-- from  https://www.w3schools.com/bootstrap/bootstrap_carousel.asp-->
+
+        <!-- thumbnails -->
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-sm-6 col-md-4 " >
+                    <div class="thumbnail">
+                        <img src="images/apple.jpg" alt="apple">
+                        <div class="caption">
+                            <h3>Apple</h3>
+                            <h4>$2.99/100g</h4>
+                            <p>like the bottom jeans</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button">Add to Cart</a>
+                                <a href="AppleDetails.html" class="btn btn-default" role="button">More details</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="images/Banana.jpg" alt="banana">
+                        <div class="caption">
+                            <h3>Banana</h3>
+                            <h4>$1.99/100g</h4>
+                            <p>mmm Monke</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button">Add to Cart</a>
+                                <a href="BananaDetails.html" class="btn btn-default" role="button">More details</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="images/Orange.jpg" alt="oranges">
+                        <div class="caption">
+                            <h3>Orange</h3>
+                            <h4>$3.99/200g</h4>
+                            <p>hey apple</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button">Add to Cart</a>
+                                <a href="OrangeDetails.html" class="btn btn-default" role="button">More details</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <!--Include common footer-->
+    <footer class="bg-primary text-white text-lg-start">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-4" id="customer-service">
+                    <h5 class="text-uppercase">Customer Service</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <div>
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+                                    Contact Us
+                                </button>
+                                <!-- modal for contact us form -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="myModalLabel" style="color: black; font-weight: bold;">Contact Us</h5>
+                                        </div>
+                                        <div class="modal-body" id="contactUsFormBody">
+                                            <form name="contactUs" id="contactUsForm">
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter email">
+                                                    <p id="emailMsg" style="color: red;"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="itemName">Item Name</label>
+                                                    <input type="text" class="form-control" name="itemName" id="itemName" placeholder="Item Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="orderNumber">Order Number</label>
+                                                    <input type="text" class="form-control" name="orderNumber" id="orderNumber" placeholder="Order Number">
+                                                    <p id="orderNumberMsg" style="color: red;"></p>
+                                                </div>
+                                                
+                                            </form>
+                                            <label for="questions">Questions</label></br>
+                                            <textarea name="questions" form="contactUsForm">(Optional)</textarea>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary" onclick="validateContactUsForm()">Submit</button>
+                                        </div>
+                                        <script type="text/javascript" src="js/Login.js"></script>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Terms and conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Find a store</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Copyright:
+            <a class="text-light" href="../index.html">Hole Foods</a>
+        </div>
+    
+    </footer>
+        
+</body>
+</html>
