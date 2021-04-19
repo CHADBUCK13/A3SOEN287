@@ -1,0 +1,66 @@
+<!--Top header for logo and user tools-->
+<nav class="navbar navbar-inverse">
+    <!--Allow content to span entire page-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Hole Foods <span><img src="images/logo.png" alt="logo.png" style="height: 1.5em;"></span></a>
+
+            <!--Show user icon as button for dropdown when viewport drops below 775px width-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#commonHeader">
+                    <span class="glyphicon glyphicon-user" style="color:white;"></span>
+            </button>                
+        </div>
+
+        <!--Show on right but when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="commonHeader">
+            <ul class="nav navbar-nav navbar-right">                
+                <li><a href='signup.html'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>
+                <li><a href='login.html'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>                       
+            </ul>
+        </div>                   
+    </div>        
+</nav>
+
+<!--Menu for page navigation-->
+<nav class="navbar navbar-default">
+    <!--Limit content to center of page-->
+    <div class="container">
+        <!--Show button with 3 bars for menu dropdown when viewport drops below 775px width-->
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        </div>
+
+        <!--when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <!--List of links to pages user can use-->
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AllProducts.html">All Products</a></li>
+                <!--Dropdown list of links for aisles that go to separate pages for each aisle-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Aisles <span class="caret"></span> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Beverages.html">Beverages</a></li>
+                            <li><a href="CleaningSupplies.html">Cleaning Supplies</a></li>                            
+                            <li><a href="Dairy.html">Dairy</a></li>
+                            <li><a href="Deli.html">Deli</a></li>
+                            <li><a href="Fruit.html">Fruits</a></li>
+                            <li><a href="Pantry.html">Pantry</a></li>                            
+                        </ul>
+                </li>                    
+                <li><a href="About.html">About</a></li>
+                
+            </ul>
+
+            <!--Show link to shopping cart floated on the right of the navbar-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="ShoppingCart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                
+            </ul>
+        </div>                   
+    </div>        
+</nav>
